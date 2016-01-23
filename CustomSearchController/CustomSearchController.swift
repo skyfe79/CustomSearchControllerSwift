@@ -16,7 +16,7 @@ class CustomSearchController: UISearchController, UISearchBarDelegate {
         let result = CustomSearchBar()
         result.delegate = self
         return result
-        }()
+    }()
     
     override var searchBar: UISearchBar {
         get {
@@ -34,13 +34,13 @@ class CustomSearchController: UISearchController, UISearchBarDelegate {
     
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        if(!searchBar.text.isEmpty)
-        {
-            self.active=true
-        }
-        else
-        {
-            self.active=false
+        
+        if let text = searchBar.text {
+            if !text.isEmpty {
+                self.active=true
+            } else {
+                self.active=false
+            }
         }
     }
     
@@ -48,7 +48,7 @@ class CustomSearchController: UISearchController, UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         

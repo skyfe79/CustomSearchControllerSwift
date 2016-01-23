@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF6A62F1C53758700CE094C /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6A62E1C53758700CE094C /* UIAppearance+Swift.m */; };
 		77FB63441B85A822005855FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB63431B85A822005855FB /* AppDelegate.swift */; };
 		77FB63461B85A822005855FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB63451B85A822005855FB /* ViewController.swift */; };
 		77FB63491B85A822005855FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FB63471B85A822005855FB /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EF6A62C1C53758600CE094C /* CustomSearchController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomSearchController-Bridging-Header.h"; sourceTree = "<group>"; };
+		4EF6A62D1C53758700CE094C /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		4EF6A62E1C53758700CE094C /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
 		77FB633E1B85A822005855FB /* CustomSearchController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSearchController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FB63421B85A822005855FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FB63431B85A822005855FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		77FB63401B85A822005855FB /* CustomSearchController */ = {
 			isa = PBXGroup;
 			children = (
+				4EF6A62D1C53758700CE094C /* UIAppearance+Swift.h */,
+				4EF6A62E1C53758700CE094C /* UIAppearance+Swift.m */,
 				77FB63431B85A822005855FB /* AppDelegate.swift */,
 				77FB63451B85A822005855FB /* ViewController.swift */,
 				77FB63631B85BA7F005855FB /* CustomSearchController.swift */,
@@ -89,6 +95,7 @@
 				77FB634A1B85A822005855FB /* Images.xcassets */,
 				77FB634C1B85A822005855FB /* LaunchScreen.xib */,
 				77FB63411B85A822005855FB /* Supporting Files */,
+				4EF6A62C1C53758600CE094C /* CustomSearchController-Bridging-Header.h */,
 			);
 			path = CustomSearchController;
 			sourceTree = "<group>";
@@ -162,7 +169,9 @@
 		77FB63361B85A822005855FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Pandodroid;
 				TargetAttributes = {
 					77FB633D1B85A822005855FB = {
@@ -220,6 +229,7 @@
 			files = (
 				77FB63641B85BA7F005855FB /* CustomSearchController.swift in Sources */,
 				77FB63461B85A822005855FB /* ViewController.swift in Sources */,
+				4EF6A62F1C53758700CE094C /* UIAppearance+Swift.m in Sources */,
 				77FB63661B85C30A005855FB /* CustomSearchBar.swift in Sources */,
 				77FB63441B85A822005855FB /* AppDelegate.swift in Sources */,
 			);
@@ -284,6 +294,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -350,9 +361,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CustomSearchController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pandoroid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomSearchController/CustomSearchController-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -360,9 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CustomSearchController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pandoroid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomSearchController/CustomSearchController-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -380,6 +398,7 @@
 				);
 				INFOPLIST_FILE = CustomSearchControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pandoroid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomSearchController.app/CustomSearchController";
 			};
@@ -395,6 +414,7 @@
 				);
 				INFOPLIST_FILE = CustomSearchControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pandoroid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomSearchController.app/CustomSearchController";
 			};
@@ -419,6 +439,7 @@
 				77FB635F1B85A822005855FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77FB63601B85A822005855FB /* Build configuration list for PBXNativeTarget "CustomSearchControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +448,7 @@
 				77FB63621B85A822005855FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
