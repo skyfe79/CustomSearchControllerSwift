@@ -37,8 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.itemSearchController.searchBar.backgroundImage = UIImage()
         self.itemSearchController.searchBar.setImage(UIImage(named: "blank"), forSearchBarIcon: .Search, state: .Normal)
         
-        self.itemSearchController.searchBar.searchTextPositionAdjustment = UIOffsetMake(-19,0)
-        self.itemSearchController.searchBar.placeholder = "Enter Search Word        "
+        //self.itemSearchController.searchBar.searchTextPositionAdjustment = UIOffsetMake(-19,0)
+        self.itemSearchController.searchBar.placeholder = "Enter Search Word"
         self.navigationItem.titleView = self.itemSearchController.searchBar
         self.itemSearchController.hidesNavigationBarDuringPresentation = false
     }

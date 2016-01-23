@@ -28,21 +28,21 @@ class CustomSearchBar: UISearchBar {
         super.drawRect(rect)
         
         
-//        if let searchBarIndex = indexOfSearchBar() {
-//            
-//            if let index = indexOfSearchFieldInSubviews(searchBarIndex) {
-//                
-//                let searchBarView = self.subviews[searchBarIndex]
-//                
-//                if let searchField: UITextField = searchBarView.subviews[index] as? UITextField {
-//                    searchField.background = nil
-//                    searchField.backgroundColor = UIColor.clearColor()
-//                    
-//                    let image = UIImage(named: "search_bg")?.resizableImageWithCapInsets(UIEdgeInsetsMake(4, 4, 4, 4))
-//                    image?.drawInRect(CGRectInset(rect, 0, 6), blendMode: .Normal, alpha: 1.0)
-//                }
-//            }
-//        }
+        if let searchBarIndex = indexOfSearchBar() {
+            
+            if let index = indexOfSearchFieldInSubviews(searchBarIndex) {
+                
+                let searchBarView = self.subviews[searchBarIndex]
+                
+                if let searchField: UITextField = searchBarView.subviews[index] as? UITextField {
+                    searchField.background = nil
+                    searchField.backgroundColor = UIColor.clearColor()
+                    
+                    let image = UIImage(named: "search_bg")?.resizableImageWithCapInsets(UIEdgeInsetsMake(4, 4, 4, 4))
+                    image?.drawInRect(CGRectInset(rect, 0, 6), blendMode: .Normal, alpha: 1.0)
+                }
+            }
+        }
     }
     
     func indexOfSearchBar() -> Int? {

@@ -31,8 +31,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kG8-69-AY6">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="z4U-mA-tIl"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="0bW-nU-VEj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="W6Q-rh-HOx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="7Ns-Zi-dMH"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
